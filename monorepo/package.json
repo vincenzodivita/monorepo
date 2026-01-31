@@ -1,0 +1,17 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend:frutta": "pnpm --filter frutta-frontend dev",
+    "dev:frontend:verdura": "pnpm --filter verdura-frontend dev",
+    "dev:backend:frutta": "pnpm --filter frutta-backend start:dev",
+    "dev:backend:verdura": "pnpm --filter verdura-backend start:dev",
+    "dev:backend:hello": "pnpm --filter hello-backend start:dev",
+    "dev:all": "concurrently \"pnpm dev:backend:hello\" \"pnpm dev:backend:frutta\" \"pnpm dev:backend:verdura\" \"pnpm dev:frontend:frutta\" \"pnpm dev:frontend:verdura\"",
+    "build:all": "pnpm -r build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
