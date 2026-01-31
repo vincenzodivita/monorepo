@@ -1,10 +1,75 @@
-monorepo/backends/frutta/node_modules/*
-monorepo/backends/frutta/dist/*
-monorepo/backends/verdura/node_modules/*
-monorepo/backends/verdura/dist/*
-monorepo/backends/hello/node_modules/*
-monorepo/backends/hello/dist/*
-monorepo/frontends/frutta/node_modules/*
-monorepo/frontends/verdura/node_modules/*
-monorepo/node_modules
-monorepo/pnpm-locl.yaml
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Environment variables (IMPORTANTE!)
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# Docker (se userai Docker in futuro)
+.docker/
+docker-compose.override.yml
+
+# Cloud Run / GCP (opzionale, ma utile)
+.gcloudignore
+
+# Netlify (opzionale)
+.netlify/
