@@ -1,0 +1,10 @@
+monorepo/backends/frutta/node_modules/*
+monorepo/backends/frutta/dist/*
+monorepo/backends/verdura/node_modules/*
+monorepo/backends/verdura/dist/*
+monorepo/backends/hello/node_modules/*
+monorepo/backends/hello/dist/*
+monorepo/frontends/frutta/node_modules/*
+monorepo/frontends/verdura/node_modules/*
+monorepo/node_modules
+monorepo/pnpm-locl.yaml

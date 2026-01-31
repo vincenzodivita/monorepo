@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import './App.css';
 
+const HELLO_API_URL = import.meta.env.VITE_HELLO_API_URL || 'http://localhost:3001';
+const VERDURA_API_URL = import.meta.env.VITE_VERDURA_API_URL || 'http://localhost:3003';
+
 function App() {
   const [helloMessage, setHelloMessage] = useState<string>('');
   const [verduraMessage, setVerduraMessage] = useState<string>('');
 
   const fetchHello = async () => {
     try {
-      const response = await fetch('http://localhost:3001/hello');
+      const response = await fetch(`${HELLO_API_URL}/hello`);
       const data = await response.json();
       setHelloMessage(data.message);
     } catch (error) {
@@ -18,7 +21,7 @@ function App() {
 
   const fetchVerdura = async () => {
     try {
-      const response = await fetch('http://localhost:3003/verdura');
+      const response = await fetch(`${VERDURA_API_URL}/verdura`);
       const data = await response.json();
       setVerduraMessage(data.vegetable);
     } catch (error) {
